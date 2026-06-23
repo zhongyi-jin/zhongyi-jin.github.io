@@ -3,8 +3,8 @@ secondary_name: ""
 navbar_name: "Zhongyi Jin"
 
 positions:
-- name: Title or Position
-- name: Affiliation Name
+- name: Postdoctoral Fellow
+- name: The Hong Kong Polytechnic University
   logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
 
 
