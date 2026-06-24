@@ -35,16 +35,21 @@ portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
-- name: Massachusetts Institute of Technology
+- name: The Hong Kong Polytechnic University
   logo: /assets/images/badges/MIT_Social_circle.png
   position: >- 
-    Department of Electrical Engineering and Computer Science <br/>
-    Ph.D. Student
-  date: Sep. 2024 - present
-- name: Peking University
+    Department of Aeronautical and Aviation Engineering <br/>
+    Philosophy of Doctor
+  date: Sep. 2022 - Oct. 2025
+- name: Dalian University of Technology
   logo: /assets/images/badges/PKU_red.png
-  position: B.S. in Computer Science
-  date: Sep. 2019 - Jul. 2021
+  position: M.S. in Hydraulic Engineering
+  date: Sep. 2019 - Jun. 2022
+- name: Ocean University of China
+  logo: /assets/images/badges/PKU_red.png
+  position: B.S. in Port, Waterway, and Costal Engineering
+  date: Sep. 2015 - Jun. 2019
+
 
 # experience:
 # - name: Peking University
@@ -52,10 +57,10 @@ education:
 #   position: Research Intern
 #   date: Sep. 2019 - Jul. 2021
 
-awards:
-- name: Award Name 2
-  date: 2024
-- name: Award Name 1 
-  date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
-  date: 2021
+# awards:
+# - name: Award Name 2
+#   date: 2024
+# - name: Award Name 1 
+#   date: 2021
+# - name: A quick brown fox jumps over the lazy dog and runs away award
+#   date: 2021
