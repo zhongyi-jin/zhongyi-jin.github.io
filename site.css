@@ -7,6 +7,17 @@
   --sun: #d9613d;
   --deep: #12363a;
   --max: 1180px;
+  --accent-surface: #ecebe1;
+}
+:root.dark {
+  --ink: #edf0e9;
+  --muted: #b2c0b9;
+  --paper: #14211f;
+  --line: #3a504c;
+  --sea: #83c5bd;
+  --sun: #f2ae8a;
+  --deep: #0c1716;
+  --accent-surface: #1d302d;
 }
 
 * { box-sizing: border-box; }
@@ -35,9 +46,12 @@ a:hover { color: var(--sea); }
   font-family: Arial, Helvetica, sans-serif;
 }
 .wordmark { font-size: 17px; font-weight: 700; letter-spacing: 0; text-decoration: none; }
+.header-actions { display: flex; align-items: center; gap: 18px; }
 nav { display: flex; gap: 24px; font-size: 14px; }
 nav a { text-decoration: none; color: var(--muted); }
 nav a.active { color: var(--ink); font-weight: 700; }
+.theme-toggle { width: 32px; height: 32px; display: grid; place-items: center; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--ink); font-size: 17px; line-height: 1; cursor: pointer; }
+.theme-toggle:hover { border-color: var(--sea); color: var(--sea); }
 
 .intro { display: grid; grid-template-columns: minmax(270px, 390px) minmax(0, 1fr); gap: clamp(42px, 7vw, 98px); padding: 82px 0 88px; align-items: center; }
 .eyebrow { margin: 0 0 14px; color: var(--sea); font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
@@ -55,16 +69,18 @@ h1 { max-width: 720px; margin-bottom: 12px; font-size: clamp(50px, 7vw, 88px); l
 .section-label h2, .highlights h2, .publication-section h2 { margin: 0; font-size: 30px; font-weight: 400; line-height: 1.1; }
 .prose { max-width: 720px; font-size: 20px; line-height: 1.55; }
 .prose p:last-child { margin-bottom: 0; }
-.interests { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.interests { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
 .interests article { border-top: 2px solid var(--sea); padding-top: 15px; }
 .interests h3, .timeline h3 { margin-bottom: 8px; font-size: 20px; font-weight: 400; line-height: 1.22; }
 .interests p:last-child, .timeline p:last-child { color: var(--muted); font-size: 15px; line-height: 1.48; }
+.interests ul { margin: 0; padding-left: 20px; color: var(--muted); font-size: 16px; line-height: 1.65; }
+.collaboration-callout { grid-column: 1 / -1; margin-top: 8px; padding: 22px 24px; border-left: 3px solid var(--sea); background: var(--accent-surface); font-size: 18px; line-height: 1.5; }
 .timeline { display: grid; gap: 27px; }
 .timeline article { display: grid; grid-template-columns: 140px 1fr; column-gap: 24px; border-bottom: 1px solid var(--line); padding-bottom: 22px; }
 .timeline article:last-child { border-bottom: 0; padding-bottom: 0; }
 .timeline-date { grid-row: span 2; color: var(--sea); font-size: 12px; font-weight: 700; letter-spacing: .04em; }
 .timeline h3, .timeline p { margin-bottom: 0; }
-.highlights { display: grid; grid-template-columns: .6fr 1fr; gap: 48px; background: #e7e7db; padding-inline: clamp(22px, 5vw, 64px); margin-block: 0 94px; }
+.highlights { display: grid; grid-template-columns: .6fr 1fr; gap: 48px; background: transparent; padding-inline: 0; margin-block: 0 94px; }
 .highlights ul { list-style: none; padding: 0; margin: 0; }
 .highlights li { padding: 13px 0; border-bottom: 1px solid rgba(23,37,37,.22); }.highlights li:last-child { border-bottom: 0; }
 .highlights span { display: inline-block; width: 58px; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; color: var(--sea); }
@@ -86,7 +102,7 @@ footer p { margin: 0; } footer a { color: var(--ink); }
 
 @media (max-width: 780px) {
   .site-header, main, footer { width: min(calc(100% - 32px), var(--max)); }.site-header { min-height: 75px; }
-  .intro, .split-section, .highlights, .publication-section { grid-template-columns: 1fr; gap: 30px; }
+  .intro, .split-section, .highlights, .publication-section, .interests { grid-template-columns: 1fr; gap: 30px; }
   .intro { padding: 64px 0; }.portrait-frame { max-width: min(100%, 360px); }
   .section { padding: 58px 0; }.interests { grid-template-columns: 1fr; gap: 34px; }.interests article { max-width: 100%; }
   .timeline article { grid-template-columns: 1fr; gap: 4px; }.timeline-date { grid-row: auto; }
@@ -95,5 +111,5 @@ footer p { margin: 0; } footer a { color: var(--ink); }
   footer { min-height: 80px; }
 }
 @media (max-width: 410px) {
-  nav { gap: 16px; }.wordmark { font-size: 15px; }.contact-line { gap: 9px 17px; }
+  .header-actions { gap: 12px; } nav { gap: 16px; }.wordmark { font-size: 15px; }.contact-line { gap: 9px 17px; }
 }
