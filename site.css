@@ -56,7 +56,7 @@ nav a.active { color: var(--ink); font-weight: 700; }
 .intro { display: grid; grid-template-columns: minmax(270px, 390px) minmax(0, 1fr); gap: clamp(42px, 7vw, 98px); padding: 82px 0 88px; align-items: center; }
 .eyebrow { margin: 0 0 14px; color: var(--sea); font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
-h1 { max-width: 720px; margin-bottom: 12px; font-size: clamp(50px, 7vw, 88px); line-height: .96; font-weight: 400; letter-spacing: 0; }
+h1 { max-width: 720px; margin-bottom: 20px; font-size: clamp(50px, 7vw, 88px); line-height: .96; font-weight: 400; letter-spacing: 0; }
 .role { margin-bottom: 32px; color: var(--muted); font-size: 15px; }
 .lede { max-width: 610px; margin-bottom: 30px; font-size: clamp(21px, 2.2vw, 27px); line-height: 1.38; }
 .contact-line { display: flex; flex-wrap: wrap; gap: 10px 23px; font-size: 14px; }
