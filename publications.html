@@ -28,7 +28,7 @@
           <p class="eyebrow">Peer-reviewed journal articles</p>
           <h2 id="published-heading">Published</h2>
         </div>
-        <ol class="publication-list" reversed>
+        <ol class="publication-list">
           <li><p class="pub-year">2026</p><p>Guo, J., Wang, W.*, Kwong, P., Peng, Y., <strong>Jin, Z.</strong>, Chen, Z. (2026). Multi-water-source dispatch considering energy conservation and resources recycling for dust suppression in dry bulk ports. <em>Computers &amp; Industrial Engineering</em>, 112113.</p></li>
           <li><p class="pub-year">2026</p><p>Zhang, C., <strong>Jin, Z.</strong>, Ng, K. K.*, Liu, Y., &amp; Wu, L. (2026). Stabilised branch-and-check method for optimising multi-runway aircraft landing problem modelled through stochastic programming with learning-driven arrival time predictions. <em>Transportation Research Part E: Logistics and Transportation Review</em>, 210, 104763.</p></li>
           <li><p class="pub-year">2026</p><p>Shu, Y., Ng, K. K.*, Liu, W., <strong>Jin, Z.</strong>, Zhang, C. (2026). Optimising last-mile delivery network through locker-drone logistics system design under uncertain demand. <em>Journal of Air Transport Management</em>, 134, 102984.</p></li>
@@ -53,14 +53,14 @@
           <p class="eyebrow">Manuscripts</p>
           <h2 id="review-heading">Under review</h2>
         </div>
-        <ol class="publication-list compact" reversed>
+        <ol class="publication-list compact">
           <li><p><strong>Jin, Z.</strong>, Gong, Z., Ng, K. K.*, Huai, Y. Economic analysis of vertiport investment strategies and system congestion effects in the era of urban air mobility. Submitted to <em>Transportation Research Part B: Methodological</em>.</p></li>
           <li><p>Gong, Z., Liu, W. J., <strong>Jin, Z.</strong>, Wang, K., Fu, X.* Capacity investment in a cross-border rail corridor considering geopolitical risk and maritime competition. Submitted to <em>Transport Policy</em>.</p></li>
           <li><p><strong>Jin, Z.</strong>, Okan, A., Ng, K. K.*, Zhang, C., Wu, L. Integrated service design and pricing of regional air mobility with passenger travel mode choice. Submitted to <em>Transportation Research Part B: Methodological</em>.</p></li>
           <li><p>Gong, Z., Guo, J., <strong>Jin, Z.</strong>*, Li, X., Fu, X. Capacity investment in a cross-border rail corridor considering geopolitical risk and maritime competition. Submitted to <em>Transport Policy</em>.</p></li>
           <li><p>Zhang, C., <strong>Jin, Z.</strong>, Ng, K. K.*, Xu, Y. Stacked generalisation-based prescriptive analytics approaches for airport gate planning and operations. Submitted to <em>Omega</em>.</p></li>
         </ol>
-        <p class="note">* Corresponding author. Publication details are transcribed from the CV provided in September 2026.</p>
+        <p class="note">* Corresponding author.</p>
       </section>
     </main>
 
@@ -68,6 +68,18 @@
       <p>© <span id="year"></span> Zhongyi Jin</p>
       <a href="mailto:kimo-zhongyi.jin@connect.polyu.hk">Get in touch</a>
     </footer>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.querySelectorAll('.publication-list li').forEach((item) => {
+        const reference = item.querySelector('p:last-child').textContent;
+        const link = document.createElement('a');
+        link.className = 'paper-link';
+        link.href = `https://scholar.google.com/scholar?q=${encodeURIComponent(reference)}`;
+        link.target = '_blank';
+        link.rel = 'noreferrer';
+        link.textContent = 'Link';
+        item.append(link);
+      });
+    </script>
   </body>
 </html>
