@@ -71,10 +71,9 @@
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
       document.querySelectorAll('.publication-list li').forEach((item) => {
-        const reference = item.querySelector('p:last-child').textContent;
         const link = document.createElement('a');
         link.className = 'paper-link';
-        link.href = `https://scholar.google.com/scholar?q=${encodeURIComponent(reference)}`;
+        link.href = item.dataset.url || '#';
         link.target = '_blank';
         link.rel = 'noreferrer';
         link.textContent = 'Link';

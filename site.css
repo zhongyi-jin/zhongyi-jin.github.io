@@ -88,7 +88,7 @@ h1 { max-width: 720px; margin-bottom: 12px; font-size: clamp(50px, 7vw, 88px); l
 .publication-list p { margin-bottom: 0; }.publication-list > li > p:last-child { line-height: 1.52; }
 .pub-year { margin-bottom: 6px; color: var(--sea); font-size: 12px; font-weight: 700; }
 .paper-link { display: inline-block; margin-top: 10px; color: var(--sea); font-size: 12px; font-weight: 700; letter-spacing: .04em; text-decoration: none; }
-.paper-link::after { content: " ->"; color: var(--sun); }.note { margin: 26px 0 0; color: var(--muted); font-size: 12px; }
+.note { margin: 26px 0 0; color: var(--muted); font-size: 12px; }
 
 footer { min-height: 92px; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; color: var(--muted); font-size: 13px; }
 footer p { margin: 0; } footer a { color: var(--ink); }
